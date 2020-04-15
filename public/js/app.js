@@ -12,7 +12,7 @@ const fetchWeather = (address) => {
         msgOne.textContent = 'Error'
         msgTwo.textContent = 'no input found!! please add search keyword.'        
     }else{
-        fetch('http://localhost:3000/weather?address='+address).then((res) => {
+        fetch('/weather?address='+address).then((res) => {
             res.json().then((data) => {
                 if(data.error){
                     msgOne.textContent = 'Error'
